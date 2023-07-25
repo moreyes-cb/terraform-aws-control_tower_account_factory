@@ -16,6 +16,9 @@ terraform {
 	}
 }
 
+provider “aws” {
+  region = var.aws_region
+}
 
 module "packaging" {
   source = "./modules/aft-archives"
