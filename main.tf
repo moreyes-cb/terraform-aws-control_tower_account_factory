@@ -2,6 +2,21 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+Terraform {
+  cloud {
+	organization = “moreyes”
+	workspaces {
+  	name = “terraform-aws-control_tower_account_factory”
+	}
+  }
+  required_providers {
+	aws = {
+  	source  = “hashicorp/aws”
+  	version = “>= 5.0”
+	}
+}
+
+
 module "packaging" {
   source = "./modules/aft-archives"
 }
