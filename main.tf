@@ -3,17 +3,14 @@
 #
 
 terraform {
-  cloud {
-	organization = moreyes”
-	workspaces {
-  	name = “terraform-aws-control_tower_account_factory”
-	}
-  }
+  required_version = ">= 1.3"
+
   required_providers {
-	aws = {
-  	source  = “hashicorp/aws”
-  	version = “>= 4.0”
-	}
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
 }
 
 module "packaging" {
