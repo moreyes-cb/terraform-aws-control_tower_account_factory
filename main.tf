@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-Terraform {
+terraform {
   cloud {
 	organization = “moreyes”
 	workspaces {
